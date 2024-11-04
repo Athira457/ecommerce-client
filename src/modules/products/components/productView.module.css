@@ -1,0 +1,34 @@
+.detailsblock {
+    padding: 16px; /* Padding for details */
+    width: 90%; /* Set width for details block */
+  }
+  
+  .detailsblock h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Font size for brand */
+  }
+  
+  .subhead1 {
+    margin: 4px 0; /* Margin for paragraphs */
+    font-size: 14px; /* Font size for description */
+  }
+  
+  .productView{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .buybutton {
+    background-color: #ffffff; /* Button background color */
+    color: #000; /* Button text color */
+    border: 1px solid #848484;
+    padding: 8px 16px; /* Padding for button */
+    border-radius: 50px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 8px; /* Space above button */
+    font-size: 13px;
+    width: 100%;
+    font-weight: bold;
+    height: 40px;
+  }
