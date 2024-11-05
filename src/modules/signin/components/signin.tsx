@@ -15,7 +15,7 @@ const Signin: React.FC = () => {
         event.preventDefault();
 
         try {
-          const response = await axios.post('http://localhost:4000/signup', { name, email, password });
+          const response = await axios.post('http://localhost:4000/login', { email, password });
           if (response.data.success) {
             alert("successfully registered"); 
           } else {
@@ -53,10 +53,10 @@ const Signin: React.FC = () => {
 
                     <Image src={eye} alt="Show Password" className={styles.eyeicon} width={40} height={40}/>
                 </div>
-                <Link href="../home/home.html">
+                <Link href="/productView">
                     <button className={styles.signupbutton}>Sign In</button>
                 </Link>
-                <p className={styles.signintext}>Already have an account? <Link href="/login" className={styles.signinlink}>Sign Up</Link></p>
+                <p className={styles.signintext}>Already have an account? <Link href="/signup" className={styles.signinlink}>Sign Up</Link></p>
             </div>
 
         </form>

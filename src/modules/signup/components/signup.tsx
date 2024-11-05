@@ -2,13 +2,13 @@
 "use client";
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from './login.module.css';
+import styles from './signup.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import cross from '@/themes/img/cross-ash.svg';
 import eye from '@/themes/img/eye.svg';
 
-const Login: React.FC = () => {
+const Signup: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,7 +17,7 @@ const Login: React.FC = () => {
       event.preventDefault();
 
       try {
-        const response = await axios.post('http://localhost:4000/login', { name, email, password });
+        const response = await axios.post('http://localhost:4000/signup', { name, email, password });
         if (response.data.success) {
           alert("successfully registered"); 
         } else {
@@ -64,7 +64,7 @@ const Login: React.FC = () => {
                 <Image src={eye} alt="Show Password" className={styles.eyeIcon} width={40} height={40}/> 
             </div>
    
-            <button className={styles.signupbutton}>Sign Up</button>
+            <button type="submit" className={styles.signupbutton}>Sign Up</button>
             <p className={styles.signintext}>Already have an account? <Link href="signin"
                     className={styles.signinlink}>Sign In</Link></p>
         </div>
@@ -74,4 +74,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Signup;
